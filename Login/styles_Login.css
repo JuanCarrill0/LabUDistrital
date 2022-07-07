@@ -1,0 +1,130 @@
+body{
+    background-color:hsl(0, 100%, 74%);
+    background-image: url("Assets/bg-intro-desktop.png");
+    background-size: cover;
+    font-family: 'Alata', sans-serif;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height:100vh;
+    overflow: hidden;
+}
+
+.text-White{
+    color: white;
+}
+
+.text{
+    font-weight: lighter;
+    color:hsl(245, 27%, 92%);
+}
+.text-red{
+    color: hsl(0, 100%, 74%);
+}
+
+.text-gray{
+    color: hsl(246, 25%, 77%) ;
+}
+
+.content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+}
+
+.argument{
+    margin: 25px;
+    width: 500px;
+    color: white;
+}
+
+.text-position{
+    position: relative;
+    top: -16px;
+}
+
+.title{
+    font-size: 50px;
+    line-height: 50px;
+}
+
+
+.aside{
+    display: flex;
+    flex-direction:column;
+    width: 500px;
+    z-index: 1;
+    text-align: center;
+}
+
+.topBox{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-size: 15px;
+    color: white;
+    height: 55px;
+    margin-bottom:  20px;
+    background-color: hsl(248, 32%, 49%);
+    border-radius: 8px;
+}
+
+.form{
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.form-input_1,
+.form-input_2,
+.form-input_3,
+.form-input_4{
+    width: 80%;
+    border: 1px solid hsl(246, 25%, 77%);
+    position: relative;
+    top: 20px;
+    margin: 10px 35px;
+    padding: 15px;
+}
+
+.bottomBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    letter-spacing: 0.2mm;
+    background-color: hsl(154, 59%, 51%);
+    border-radius: 5px;
+    height: 45px;
+    margin: 25px 35px;
+}
+
+.text-min{
+    font-size: 10px;
+    position: relative;
+    top: -15px;
+}
+
+.link{
+    color: white;
+    text-decoration: none;
+}
+
+/* MOBILE */
+
+@media (max-width: 800px){
+
+    body{
+        overflow: visible;
+    }
+
+    .content{
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .aside{
+        position: relative;
+        margin: 5%;
+    }
+}
