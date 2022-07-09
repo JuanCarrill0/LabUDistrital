@@ -20,6 +20,9 @@ body{
     color:hsl(245, 27%, 92%);
 }
 .text-red{
+    position: relative;
+    top: -15px;
+    font-size: 12px;
     color: hsl(0, 100%, 74%);
 }
 
@@ -29,6 +32,10 @@ body{
 
 .text-Green{
     border-bottom: solid hsl(154, 59%, 51%) 2px;
+}
+
+.text-red:hover{
+    cursor: pointer;
 }
 
 .content{
@@ -83,11 +90,22 @@ body{
     border-radius: 8px;
 }
 
-.form{
+.form-sesion{
+    display: initial;
+}
+
+.form-register{
+    display: none;
+}
+
+.form-sesion, .form-register{
     background-color: white;
     border-radius: 8px;
     padding: 10px;
 }
+
+
+
 
 .form-input_1,
 .form-input_2,
