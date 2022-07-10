@@ -102,8 +102,107 @@
         </section>
         <section id="money">
           <div class="leftMoney">
-            <button class="btnM">Deposit</button>
-            <button class="btnM">Spend</button>
+            <!-- Button that triggers deposit modal -->
+            <button
+              class="btnM"
+              data-bs-toggle="modal"
+              data-bs-target="#depositModal"
+            >
+              Deposit
+              <img src="assets/depositIcon-removebg-preview.png" alt="" />
+            </button>
+
+            <!-- Deposit Modal | Pop-Up-->
+            <div
+              class="modal fade"
+              id="depositModal"
+              tabindex="-1"
+              aria-labelledby="depositModalLabel"
+              aria-hidden="true"
+              data-bs-backdrop="static"
+            >
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="depositModalLabel">
+                      Deposit Form
+                    </h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Veritatis officiis quia neque harum accusantium assumenda?
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-bs-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                    <button type="button" class="btn btn-primary">
+                      Save Money
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Button that triggers Spend Modal -->
+
+            <button
+              class="btnM"
+              data-bs-toggle="modal"
+              data-bs-target="#spendModal"
+            >
+              Spend <img src="assets/spendIcon.png" alt="" />
+            </button>
+
+            <!-- Deposit Modal | Pop-Up-->
+            <div
+              class="modal fade"
+              id="spendModal"
+              tabindex="-1"
+              aria-labelledby="spendModalLabel"
+              aria-hidden="true"
+              data-bs-backdrop="static"
+            >
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="spendModalLabel">Spend Form</h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Veritatis officiis quia neque harum accusantium assumenda?
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-bs-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                    <button type="button" class="btn btn-primary">
+                      Make Transaction
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <section class="rightMoney">
             <h1 id="logTitle">Transaction Log</h1>
@@ -111,11 +210,10 @@
               <table cellpadding="0" cellspacing="0" border="0">
                 <thead>
                   <tr>
-                    <th>Code</th>
-                    <th>Company</th>
-                    <th>Price</th>
-                    <th>Change</th>
-                    <th>Change %</th>
+                    <th>Title</th>
+                    <th>Amount</th>
+                    <th>Type</th>
+                    <th>Date</th>
                   </tr>
                 </thead>
               </table>
@@ -124,130 +222,112 @@
               <table cellpadding="0" cellspacing="0" border="0">
                 <tbody>
                   <tr>
-                    <td>AAC</td>
                     <td>AUSTRALIAN COMPANY</td>
                     <td>$1.38</td>
-                    <td>+2.01</td>
-                    <td>-0.36%</td>
+                    <td>DEPOSIT</td>
+                    <td>11/07/2022</td>
                   </tr>
                   <tr>
-                    <td>AAD</td>
                     <td>AUSENCO</td>
                     <td>$2.38</td>
-                    <td>-0.01</td>
-                    <td>-1.36%</td>
+                    <td>SPEND</td>
+                    <td>11/07/2022</td>
                   </tr>
                   <tr>
-                    <td>AAX</td>
                     <td>ADELAIDE</td>
                     <td>$3.22</td>
-                    <td>+0.01</td>
-                    <td>+1.36%</td>
+                    <td>SPEND</td>
+                    <td>10/07/2022</td>
                   </tr>
                   <tr>
-                    <td>XXD</td>
                     <td>ADITYA BIRLA</td>
                     <td>$1.02</td>
-                    <td>-1.01</td>
-                    <td>+2.36%</td>
+                    <td>DEPOSIT</td>
+                    <td>10/07/2022</td>
                   </tr>
                   <tr>
-                    <td>AAC</td>
                     <td>AUSTRALIAN COMPANY</td>
                     <td>$1.38</td>
-                    <td>+2.01</td>
-                    <td>-0.36%</td>
+                    <td>SPEND</td>
+                    <td>10/07/2022</td>
                   </tr>
                   <tr>
-                    <td>AAD</td>
                     <td>AUSENCO</td>
                     <td>$2.38</td>
-                    <td>-0.01</td>
-                    <td>-1.36%</td>
+                    <td>DEPOSIT</td>
+                    <td>10/07/2022</td>
                   </tr>
                   <tr>
-                    <td>AAX</td>
                     <td>ADELAIDE</td>
                     <td>$3.22</td>
-                    <td>+0.01</td>
-                    <td>+1.36%</td>
+                    <td>DEPOSIT</td>
+                    <td>10/07/2022</td>
                   </tr>
                   <tr>
-                    <td>XXD</td>
                     <td>ADITYA BIRLA</td>
                     <td>$1.02</td>
-                    <td>-1.01</td>
-                    <td>+2.36%</td>
+                    <td>SPEND</td>
+                    <td>10/07/2022</td>
                   </tr>
                   <tr>
-                    <td>AAC</td>
                     <td>AUSTRALIAN COMPANY</td>
                     <td>$1.38</td>
-                    <td>+2.01</td>
-                    <td>-0.36%</td>
+                    <td>SPEND</td>
+                    <td>08/07/2022</td>
                   </tr>
                   <tr>
-                    <td>AAD</td>
                     <td>AUSENCO</td>
                     <td>$2.38</td>
-                    <td>-0.01</td>
-                    <td>-1.36%</td>
+                    <td>DEPOSIT</td>
+                    <td>08/07/2022</td>
                   </tr>
                   <tr>
-                    <td>AAX</td>
                     <td>ADELAIDE</td>
                     <td>$3.22</td>
-                    <td>+0.01</td>
-                    <td>+1.36%</td>
+                    <td>DEPOSIT</td>
+                    <td>08/07/2022</td>
                   </tr>
                   <tr>
-                    <td>XXD</td>
                     <td>ADITYA BIRLA</td>
                     <td>$1.02</td>
-                    <td>-1.01</td>
-                    <td>+2.36%</td>
+                    <td>SPEND</td>
+                    <td>06/07/2022</td>
                   </tr>
                   <tr>
-                    <td>AAC</td>
                     <td>AUSTRALIAN COMPANY</td>
                     <td>$1.38</td>
-                    <td>+2.01</td>
-                    <td>-0.36%</td>
+                    <td>SPEND</td>
+                    <td>06/07/2022</td>
                   </tr>
                   <tr>
-                    <td>AAD</td>
                     <td>AUSENCO</td>
                     <td>$2.38</td>
-                    <td>-0.01</td>
-                    <td>-1.36%</td>
+                    <td>DEPOSIT</td>
+                    <td>04/07/2022</td>
                   </tr>
                   <tr>
-                    <td>AAX</td>
                     <td>ADELAIDE</td>
                     <td>$3.22</td>
-                    <td>+0.01</td>
-                    <td>+1.36%</td>
+                    <td>DEPOSIT</td>
+                    <td>04/07/2022</td>
                   </tr>
                   <tr>
-                    <td>XXD</td>
                     <td>ADITYA BIRLA</td>
                     <td>$1.02</td>
-                    <td>-1.01</td>
-                    <td>+2.36%</td>
+                    <td>SPEND</td>
+                    <td>04/07/2022</td>
                   </tr>
                   <tr>
-                    <td>AAC</td>
                     <td>AUSTRALIAN COMPANY</td>
                     <td>$1.38</td>
-                    <td>+2.01</td>
-                    <td>-0.36%</td>
+                    <td>DEPOSIT</td>
+                    <td>02/07/2022</td>
                   </tr>
                   <tr>
-                    <td>AAD</td>
                     <td>AUSENCO</td>
                     <td>$2.38</td>
-                    <td>-0.01</td>
-                    <td>-1.36%</td>
+                    <td>SPEND</td>
+                    <td>02/07/2022</td>
                   </tr>
                 </tbody>
               </table>

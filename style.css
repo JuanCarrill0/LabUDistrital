@@ -250,6 +250,10 @@ a {
   justify-content: center;
 }
 
+.show {
+  width: 100%;
+}
+
 .leftMoney {
   display: flex;
   flex-direction: column;
@@ -265,8 +269,28 @@ a {
 }
 
 .btnM {
-  background-color: #5f105b;
+  background-color: var(--first-color);
   color: var(--white-color);
+  padding-inline: 1.5rem;
+  padding-block: 0.75rem;
+  border-radius: 0.5rem;
+  width: 10rem;
+  border: none;
+  transition: transform 0.15s ease-in;
+}
+
+.btnM:hover {
+  transform: scale(1.1);
+}
+
+.btnM:active {
+  transform: scale(0.95);
+}
+
+.btnM img {
+  display: inline;
+  width: 3.5rem;
+  padding-inline: 0.1rem;
 }
 
 /* Table styling */
@@ -283,7 +307,6 @@ a {
   height: 100%;
   border-top-right-radius: var(--curvedBorder);
   border-bottom-right-radius: var(--curvedBorder);
-  box-shadow: -3px 0px 7px var(--first-color);
 }
 
 #logTitle {
