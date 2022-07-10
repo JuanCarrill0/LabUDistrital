@@ -1,3 +1,14 @@
+/* JS For the pre-loader */
+
+$(window).ready(() => {
+  setTimeout(() => {
+    $("#preloader").css("display", "none")
+    $("html").css({ overflow: "scroll" })
+  }, 2000)
+})
+
+/* JS for the NavBar */
+
 document.addEventListener("DOMContentLoaded", function (event) {
   const showNavbar = (toggleId, navId, bodyId, headerId) => {
     const toggle = document.getElementById(toggleId),
@@ -5,7 +16,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
       bodypd = document.getElementById(bodyId),
       headerpd = document.getElementById(headerId)
 
-    // Validate that all variables exist
     if (toggle && nav && bodypd && headerpd) {
       toggle.addEventListener("click", () => {
         // show navbar
@@ -22,7 +32,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
   showNavbar("header-toggle", "nav-bar", "body-pd", "header")
 
-  /*===== LINK ACTIVE =====*/
   const linkColor = document.querySelectorAll(".nav_link")
 
   function colorLink() {
@@ -32,14 +41,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   linkColor.forEach((l) => l.addEventListener("click", colorLink))
-
-  // Your code to run since DOM is loaded and ready
 })
 
 /* JS For the table of money section */
 
 $(window)
-  .on("load resize ", function () {
+  .on("load resize ", () => {
     var scrollWidth =
       $(".tbl-content").width() - $(".tbl-content table").width()
     $(".tbl-header").css({ "padding-right": scrollWidth })

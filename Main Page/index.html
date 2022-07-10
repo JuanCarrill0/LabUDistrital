@@ -20,17 +20,19 @@
       crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/Main Page/style.css" />
     <title>iWallet Prog Avz</title>
   </head>
   <body id="body-pd">
+    <!-- Preloader -->
+    <div id="preloader"></div>
     <!-- Top-Right logo -->
     <header class="header" id="header">
       <div class="header_toggle">
         <i class="bx bx-menu" id="header-toggle"></i>
       </div>
       <div class="header_img">
-        <img src="assets/logo.png" alt="" />
+        <img src="/assets/logo.png" alt="" />
       </div>
     </header>
 
@@ -69,7 +71,7 @@
             </a>
           </div>
         </div>
-        <a href="#" class="nav_link">
+        <a href="/Login/index_Login.html" class="nav_link">
           <i class="bx bx-log-out nav_icon"></i>
           <span class="nav_name">Sign Out</span>
         </a>
@@ -84,9 +86,9 @@
       <div class="container">
         <section id="profile">
           <div class="leftProfile">
-            <img src="assets/Profile Img.jpg" id="profileImg" alt="" />
+            <img src="/assets/profilePic.jpg" id="profileImg" alt="" />
             <div id="profileData">
-              <h2 id="profileName">Nicolas Mayorga</h2>
+              <h2 id="profileName">Pepito Perez</h2>
               <h2 id="profileType">Natural</h2>
             </div>
           </div>
@@ -100,8 +102,9 @@
           </div>
           <div class="total">Total: $<span id="totalMoney">5000</span></div>
         </section>
+
         <section id="money">
-          <div class="leftMoney">
+          <section class="leftMoney">
             <!-- Button that triggers deposit modal -->
             <button
               class="btnM"
@@ -109,7 +112,7 @@
               data-bs-target="#depositModal"
             >
               Deposit
-              <img src="assets/depositIcon-removebg-preview.png" alt="" />
+              <img src="/assets/depositIcon.png" alt="" />
             </button>
 
             <!-- Deposit Modal | Pop-Up-->
@@ -161,7 +164,7 @@
               data-bs-toggle="modal"
               data-bs-target="#spendModal"
             >
-              Spend <img src="assets/spendIcon.png" alt="" />
+              Spend <img src="/assets/spendIcon.png" alt="" />
             </button>
 
             <!-- Deposit Modal | Pop-Up-->
@@ -203,7 +206,8 @@
                 </div>
               </div>
             </div>
-          </div>
+          </section>
+
           <section class="rightMoney">
             <h1 id="logTitle">Transaction Log</h1>
             <div class="tbl-header">
@@ -350,5 +354,5 @@
     crossorigin="anonymous"
   ></script>
 
-  <script defer src="app.js"></script>
+  <script defer src="/Main Page/app.js"></script>
 </html>
