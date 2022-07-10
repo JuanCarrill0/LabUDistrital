@@ -35,3 +35,13 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
   // Your code to run since DOM is loaded and ready
 })
+
+/* JS For the table of money section */
+
+$(window)
+  .on("load resize ", function () {
+    var scrollWidth =
+      $(".tbl-content").width() - $(".tbl-content table").width()
+    $(".tbl-header").css({ "padding-right": scrollWidth })
+  })
+  .resize()
