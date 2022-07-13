@@ -4,7 +4,7 @@ $(window).ready(() => {
   setTimeout(() => {
     $("#preloader").css("display", "none")
     $("html").css({ overflow: "scroll" })
-  }, 2000)
+  }, 200)
 })
 
 /* JS for the NavBar */
@@ -47,8 +47,60 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 $(window)
   .on("load resize ", () => {
-    var scrollWidth =
+    let scrollWidth =
       $(".tbl-content").width() - $(".tbl-content table").width()
     $(".tbl-header").css({ "padding-right": scrollWidth })
   })
   .resize()
+
+/* JS For the money forms */
+
+const fillDate = () => {
+  const dateInput = $(".dateInput")
+  const date = new Date()
+  let today = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`
+
+  let formattedDate = new Date(today).toLocaleString("en-us", {
+    day: "2-digit",
+    month: "short",
+    year: "numeric",
+  })
+  dateInput.value = formattedDate
+}
+
+fillDate()
+
+/* JS For styling the amount input */
+
+var currencyInput = document.querySelector('input[type="currency"]')
+var currency = "USD"
+
+// format initial value
+onBlur({ target: currencyInput })
+
+// bind event listeners
+currencyInput.addEventListener("focus", () => {
+  let value = e.target.value
+  e.target.value = value ? localStringToNumber(value) : ""
+})
+currencyInput.addEventListener("blur", onBlur)
+
+const localStringToNumber = (s) => {
+  return Number(String(s).replace(/[^0-9.-]+/g, ""))
+}
+
+const onBlur = (e) => {
+  let value = e.target.value
+
+  let options = {
+    maximumFractionDigits: 2,
+    currency: currency,
+    style: "currency",
+    currencyDisplay: "symbol",
+  }
+
+  e.target.value =
+    value || value === 0
+      ? localStringToNumber(value).toLocaleString(undefined, options)
+      : ""
+}

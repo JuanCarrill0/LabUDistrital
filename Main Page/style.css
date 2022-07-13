@@ -167,6 +167,7 @@ a {
   .l-navbar {
     left: 0;
     padding: 1rem 1rem 0 0;
+    max-width: calc(var(--nav-width) + 156px);
   }
   .show {
     width: calc(var(--nav-width) + 156px);
@@ -275,7 +276,7 @@ a {
 }
 
 .show {
-  /* width: 100%; */
+  width: 100%;
 }
 
 .leftMoney {
@@ -290,6 +291,10 @@ a {
   font-size: 1.5rem;
   text-align: left;
   align-self: flex-start;
+}
+
+.btn {
+  margin-left: 72%;
 }
 
 .btnM {
@@ -315,6 +320,10 @@ a {
   display: inline;
   width: 3.5rem;
   padding-inline: 0.1rem;
+}
+
+#exampleCheck1 {
+  cursor: not-allowed;
 }
 
 /* Table styling */

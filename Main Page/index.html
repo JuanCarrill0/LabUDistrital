@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon" />
 
     <!-- Link to import the icons -->
     <link
@@ -86,7 +86,7 @@
       <div class="container">
         <section id="profile">
           <div class="leftProfile">
-            <img src="/assets/profilePic.jpg" id="profileImg" alt="" />
+            <img src="/assets/profile-avatar.png" id="profileImg" alt="" />
             <div id="profileData">
               <h2 id="profileName">Pepito Perez</h2>
               <h2 id="profileType">Natural</h2>
@@ -138,21 +138,50 @@
                     ></button>
                   </div>
                   <div class="modal-body">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Veritatis officiis quia neque harum accusantium assumenda?
+                    <form class="needs-validation">
+                      <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label"
+                          >Transaction Title</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="exampleInputEmail1"
+                          aria-describedby="emailHelp"
+                          placeholder="e.g. Scholarship"
+                          required
+                        />
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label"
+                          >Amount</label
+                        >
+                        <input
+                          type="currency"
+                          class="form-control"
+                          id="exampleInputPassword1"
+                          placeholder="e.g. 182400"
+                          min="1"
+                          required
+                        />
+                        <div id="emailHelp" class="form-text">
+                          We'll never share your data with anyone else.
+                        </div>
+                      </div>
+                      <div class="mb-3">
+                        <input
+                          type="text"
+                          class="form-control dateInput"
+                          id="exampleCheck1"
+                          readonly="true"
+                        />
+                      </div>
+                      <button type="submit" class="btn btn-primary">
+                        Save Money
+                      </button>
+                    </form>
                   </div>
-                  <div class="modal-footer">
-                    <button
-                      type="button"
-                      class="btn btn-secondary"
-                      data-bs-dismiss="modal"
-                    >
-                      Close
-                    </button>
-                    <button type="button" class="btn btn-primary">
-                      Save Money
-                    </button>
-                  </div>
+                  <div class="modal-footer"></div>
                 </div>
               </div>
             </div>
@@ -167,7 +196,7 @@
               Spend <img src="/assets/spendIcon.png" alt="" />
             </button>
 
-            <!-- Deposit Modal | Pop-Up-->
+            <!-- Spend Modal | Pop-Up-->
             <div
               class="modal fade"
               id="spendModal"
