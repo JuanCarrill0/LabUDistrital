@@ -43,6 +43,35 @@ document.addEventListener("DOMContentLoaded", function (event) {
   linkColor.forEach((l) => l.addEventListener("click", colorLink))
 })
 
+/* JS For the profile acc Number */
+
+const accNum = document.getElementById("accNum")
+let zeroNums = 20
+let accLength = 1
+for (let i = 0; i < zeroNums; i++) {
+  accLength *= 10
+}
+let accountNumber = Math.floor(Math.random() * accLength).toString()
+console.log(accountNumber)
+
+let newNum = ""
+for (let i = 0; i < accountNumber.length; i++) {
+  let counter = i + 1
+  counter % 5 == 0 ? (newNum += " ") : (newNum += accountNumber[i])
+}
+
+accNum.textContent = newNum
+
+console.log(`\n${newNum}`)
+
+let testString = newNum
+for (let i = 0; i < testString.length; i++) {
+  if (testString[i] !== " ") {
+    testString[i] = "*"
+  }
+}
+console.log(testString)
+
 /* JS For the table of money section */
 
 $(window)
@@ -60,7 +89,9 @@ const dateInputB = $(".dateInputB")
 
 const fillDate = () => {
   const date = new Date()
-  let today = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`
+  let today = `${date.getFullYear()}-${date.getMonth() + 1}-${
+    date.getDate() + 1
+  }`
 
   let formattedDate = new Date(today).toLocaleString("en-us", {
     day: "2-digit",
@@ -73,31 +104,33 @@ const fillDate = () => {
 dateInputA.text(fillDate())
 dateInputB.text(fillDate())
 
-/* JS For styling the amount input */
+/* styling the amount input */
 
-var currencyInput = document.querySelector('input[type="currency"]')
-var currency = "USD"
+const currencyInput = document.querySelectorAll('input[type="currency"]')
+const currency = "USD"
 
-// format inital value
-onBlur({ target: currencyInput })
+Array.from(currencyInput).forEach((eachInput) => {
+  // format initial value
+  onBlur({ target: currencyInput })
 
-// bind event listeners
-currencyInput.addEventListener("focus", onFocus)
-currencyInput.addEventListener("blur", onBlur)
+  // bind event listeners
+  eachInput.addEventListener("focus", onFocus)
+  eachInput.addEventListener("blur", onBlur)
+})
 
 function localStringToNumber(s) {
   return Number(String(s).replace(/[^0-9.-]+/g, ""))
 }
 
 function onFocus(e) {
-  var value = e.target.value
+  let value = e.target.value
   e.target.value = value ? localStringToNumber(value) : ""
 }
 
 function onBlur(e) {
-  var value = e.target.value
+  let value = e.target.value
 
-  var options = {
+  let options = {
     maximumFractionDigits: 2,
     currency: currency,
     style: "currency",
