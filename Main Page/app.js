@@ -55,8 +55,10 @@ $(window)
 
 /* JS For the money forms */
 
+const dateInputA = $(".dateInputA")
+const dateInputB = $(".dateInputB")
+
 const fillDate = () => {
-  const dateInput = $(".dateInput")
   const date = new Date()
   let today = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`
 
@@ -65,34 +67,37 @@ const fillDate = () => {
     month: "short",
     year: "numeric",
   })
-  dateInput.value = formattedDate
+  return formattedDate
 }
 
-fillDate()
+dateInputA.text(fillDate())
+dateInputB.text(fillDate())
 
 /* JS For styling the amount input */
 
 var currencyInput = document.querySelector('input[type="currency"]')
 var currency = "USD"
 
-// format initial value
+// format inital value
 onBlur({ target: currencyInput })
 
 // bind event listeners
-currencyInput.addEventListener("focus", () => {
-  let value = e.target.value
-  e.target.value = value ? localStringToNumber(value) : ""
-})
+currencyInput.addEventListener("focus", onFocus)
 currencyInput.addEventListener("blur", onBlur)
 
-const localStringToNumber = (s) => {
+function localStringToNumber(s) {
   return Number(String(s).replace(/[^0-9.-]+/g, ""))
 }
 
-const onBlur = (e) => {
-  let value = e.target.value
+function onFocus(e) {
+  var value = e.target.value
+  e.target.value = value ? localStringToNumber(value) : ""
+}
 
-  let options = {
+function onBlur(e) {
+  var value = e.target.value
+
+  var options = {
     maximumFractionDigits: 2,
     currency: currency,
     style: "currency",

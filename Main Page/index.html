@@ -45,29 +45,19 @@
             <span class="nav_logo-name">iWallet UD</span>
           </a>
           <div class="nav_list">
-            <a href="#" class="nav_link active">
-              <i class="bx bx-grid-alt nav_icon"></i>
-              <span class="nav_name">Balance</span>
-            </a>
-            <a href="#" class="nav_link">
+            <a href="#profile" class="nav_link">
               <i class="bx bx-user nav_icon"></i>
               <span class="nav_name">Profile</span>
             </a>
-            <a href="#" class="nav_link">
+
+            <a href="#money" class="nav_link">
               <i class="bx bx-money-withdraw nav_icon"></i>
-              <span class="nav_name">Deposit</span>
+              <span class="nav_name">Products</span>
             </a>
-            <a href="#" class="nav_link">
-              <i class="bx bx-arrow-from-top nav_icon"></i>
-              <span class="nav_name">Withdraw</span>
-            </a>
-            <a href="#" class="nav_link">
-              <i class="bx bx-wallet nav_icon"></i>
-              <span class="nav_name">Files</span>
-            </a>
+
             <a href="#" class="nav_link">
               <i class="bx bx-bar-chart-alt-2 nav_icon"></i>
-              <span class="nav_name">Stats</span>
+              <span class="nav_name">Balance</span>
             </a>
           </div>
         </div>
@@ -149,6 +139,7 @@
                           id="exampleInputEmail1"
                           aria-describedby="emailHelp"
                           placeholder="e.g. Scholarship"
+                          autocomplete="off"
                           required
                         />
                       </div>
@@ -162,6 +153,7 @@
                           id="exampleInputPassword1"
                           placeholder="e.g. 182400"
                           min="1"
+                          autocomplete="off"
                           required
                         />
                         <div id="emailHelp" class="form-text">
@@ -169,15 +161,11 @@
                         </div>
                       </div>
                       <div class="mb-3">
-                        <input
-                          type="text"
-                          class="form-control dateInput"
-                          id="exampleCheck1"
-                          readonly="true"
-                        />
+                        <h1 class="display-6">Deposit Date:</h1>
+                        <h1 class="display-1 text-muted dateInputA"></h1>
                       </div>
                       <button type="submit" class="btn btn-primary">
-                        Save Money
+                        Add <i class="bx bxs-save"></i>
                       </button>
                     </form>
                   </div>
@@ -217,21 +205,51 @@
                     ></button>
                   </div>
                   <div class="modal-body">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Veritatis officiis quia neque harum accusantium assumenda?
+                    <form class="needs-validation">
+                      <div class="mb-3">
+                        <label
+                          for="spentInputTitle"
+                          class="form-label"
+                          id="trTitle"
+                          >Transaction Title</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="spentInputTitle"
+                          aria-describedby="transactionHelp"
+                          placeholder="e.g. Scholarship"
+                          autocomplete="off"
+                          required
+                        />
+                      </div>
+                      <div class="mb-3">
+                        <label for="spentInputAmount" class="form-label"
+                          >Amount</label
+                        >
+                        <input
+                          type="currency"
+                          class="form-control"
+                          id="spentInputAmount"
+                          placeholder="e.g. 182400"
+                          min="1"
+                          autocomplete="off"
+                          required
+                        />
+                        <div id="transactionHelp" class="form-text">
+                          We'll never share your data with anyone else.
+                        </div>
+                      </div>
+                      <div class="mb-3">
+                        <h1 class="display-6">Spent Date:</h1>
+                        <h1 class="display-1 text-muted dateInputB"></h1>
+                      </div>
+                      <button type="submit" class="btn btn-primary">
+                        Pay <i class="bx bx-credit-card"></i>
+                      </button>
+                    </form>
                   </div>
-                  <div class="modal-footer">
-                    <button
-                      type="button"
-                      class="btn btn-secondary"
-                      data-bs-dismiss="modal"
-                    >
-                      Close
-                    </button>
-                    <button type="button" class="btn btn-primary">
-                      Make Transaction
-                    </button>
-                  </div>
+                  <div class="modal-footer"></div>
                 </div>
               </div>
             </div>
