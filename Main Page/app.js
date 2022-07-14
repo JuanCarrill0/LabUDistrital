@@ -52,7 +52,6 @@ for (let i = 0; i < zeroNums; i++) {
   accLength *= 10
 }
 let accountNumber = Math.floor(Math.random() * accLength).toString()
-console.log(accountNumber)
 
 let newNum = ""
 for (let i = 0; i < accountNumber.length; i++) {
@@ -62,7 +61,6 @@ for (let i = 0; i < accountNumber.length; i++) {
 
 accNum.textContent = newNum
 
-console.log(`\n${newNum}`)
 
 let testString = newNum
 for (let i = 0; i < testString.length; i++) {
@@ -70,7 +68,13 @@ for (let i = 0; i < testString.length; i++) {
     testString[i] = "*"
   }
 }
-console.log(testString)
+
+const accEye = document.querySelector(".account i")
+
+accEye.addEventListener("click",() => {
+  accNum.classList.toggle("blurAcc")
+})
+
 
 /* JS For the table of money section */
 

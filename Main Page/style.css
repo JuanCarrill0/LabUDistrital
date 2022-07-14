@@ -244,13 +244,35 @@ a {
   font-weight: 100;
 }
 
+.account {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+
+}
+
 #accNum {
-  filter: blur(0.25rem);
   user-select: none; /* supported by Chrome and Opera */
   -webkit-user-select: none; /* Safari */
   -khtml-user-select: none; /* Konqueror HTML */
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* Internet Explorer/Edge */
+
+  -webkit-transition: all .25s ease-in-out;
+    -moz-transition: all .25s ease-in-out;
+    -ms-transition: all .25s ease-in-out;
+    -o-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+}
+
+.account i {
+  align-self: flex-start;
+  font-size: 1.325rem;
+  cursor: pointer;
+}
+
+.blurAcc {
+  filter: blur(0.25rem);
 }
 
 .total {
