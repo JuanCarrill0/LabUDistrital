@@ -92,27 +92,23 @@
         <div class="total">Total: $<span id="totalMoney">5000</span></div>
       </section>
       <section id="money"></section>
-      <section id="Graphs">
-        <div id="depositInfo" class="graphsDiv">
-          <div id="depositGraph" class="Graphs">
-            <img src="" alt="">
+      <section id="Balance">
+        <div id="chartInfo">
+          <div id="Chart">
+            <canvas id="balanceChart" height="100" width="300">
+
+            </canvas>
+
           </div>
-          <div id="depositResume">
-            <h4 class="depositTitles">Month</h4>
-            <h4 class="depositTitles">Month Average <i class='bx bx-trending-up'></i></h4>
+          <div id="Resume">
+            <h4 id=" depositMonth" class="resumeTittles">Month</h4>
+            <h4 id=" depositAverage" class="resumeTittles">Month Average <i class='bx bx-trending-up'></i></h4>
             <div id="depositMonthlist"></div>
             <div id="depositAverageList"></div>
-          </div>
-        </div>
-        <div id="spendInfo" class="graphsDiv">
-          <div id="spendGraph" class="Graphs">
-            <img src="" alt="">
-          </div>
-          <div id="spendResume">
-            <h4 id="spendMonthH" class="spendTitles">Month</h4>
-            <h4 id="spendAverageH" class="spendTitles">Month Average <i class='bx bx-trending-down'></i></h4>
+            <h4 id="spendMonth" class="resumeTittles">Month</h4>
+            <h4 id=" spendAverage" class="resumeTittles">Month Average <i class='bx bx-trending-down'></i></h4>
             <div id="spendMonthlist"></div>
-            <div id="spendAverageList"></div>
+            <div id="spendtAverageList"></div>
           </div>
         </div>
       </section>
@@ -126,6 +122,9 @@
 <!-- Importing cdn Bootstrap -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<!-- Importing chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 
 <script defer src="app.js"></script>
 
