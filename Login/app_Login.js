@@ -65,8 +65,8 @@ register.addEventListener("click",(e)=>{
         }
 });
 
-function ValidateEmail() 
-{
+function ValidateEmail()
+ {
  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value))
   {
     return (true)
