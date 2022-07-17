@@ -1,7 +1,17 @@
-const formSesion =document.getElementById("EnterPrincipalPage")
+// Buttons //
+const formSesion =document.getElementById("formSesion");
+const formRegister =document.getElementById("formRegister")
 const ButtonRegister = document.getElementById("button-register");
+const register = document.getElementById("register");
+
+//Identification Data //
+
 const userName = document.getElementById("userName");
+const userNameRegister = document.getElementById("userNameRegister");
 const password = document.getElementById("password");
+const passwordRegister = document.getElementById("passwordRegister");
+const confirmPassword = document.getElementById("confirmPassword");
+const email =document.getElementById("email");
 const login = document.getElementById("login");
 
 
@@ -32,6 +42,42 @@ login.addEventListener("click",(e)=>{
         }
 });
 
+register.addEventListener("click",(e)=>{
+        e.preventDefault();
+        if(userNameRegister.value == "" || email.value == "" || passwordRegister.value == ""){
+                Swal.fire({
+                        icon: 'warning',
+                        title: 'Pay attention...',
+                        text: 'No box in the registry should be empty'
+                })
+        }else{
+                if(passwordRegister.value != confirmPassword.value){
+                        Swal.fire({
+                                icon: 'warning',
+                                title: 'Pay attention...',
+                                text: 'The password is not the same'
+                        })
+                }else{
+                        if(ValidateEmail()){
+                                formRegister.submit();
+                        }
+                }
+        }
+});
+
+function ValidateEmail() 
+{
+ if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value))
+  {
+    return (true)
+  }
+        Swal.fire({
+                icon: 'warning',
+                title: 'Pay attention...',
+                text: 'You have entered an invalid email address!'
+        })
+    return (false)
+}
 
     
 
