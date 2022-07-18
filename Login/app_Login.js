@@ -25,7 +25,7 @@ ButtonRegister.addEventListener("click",(e)=>{
 
 login.addEventListener("click",(e)=>{
         if(userName.value == "admin" && password.value == "admin"){
-                formSesion.setAttribute('action', '/LabUDistrital/PaginaPrincipal/index.html');
+                formSesion.setAttribute('action', '/PaginaPrincipal/index.html');
                 
         }else{
                 e.preventDefault(); // <--- prevent form from submitting
