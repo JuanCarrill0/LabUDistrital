@@ -55,7 +55,7 @@ register.addEventListener("click",(e)=>{
                         Swal.fire({
                                 icon: 'warning',
                                 title: 'Pay attention...',
-                                text: 'The password is not the same'
+                                text: 'The passwords are not the same'
                         })
                 }else{
                         if(ValidateEmail()){
