@@ -6,9 +6,9 @@ A lo largo de este proyecto/repositorio se encontrara la propuesta del grupo 2 p
 
 Los integrantes somos:
 
-- Nicolas Mayorga - 20211020078
-- Hemerson Ballen - 20211020084
-- Juan Carrillo -
+- Nicolas Mayorga - 20211020078.
+- Hemerson Ballen - 20211020084.
+- Juan Carrillo - 20211020147.
 
 En este link esta el respectivo [repositorio](https://github.com/JuanCarrill0/LabUDistrital/tree/Money) de GitHub que contiene el proyecto.
 
