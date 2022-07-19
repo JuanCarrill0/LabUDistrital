@@ -27,6 +27,7 @@ body {
 
 html {
   -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
   overflow-y: hidden;
 }
 
@@ -412,8 +413,7 @@ td {
 
 #Balance {
   width: 100%;
-  height: 95vh;
-
+  width: 100vh;
   margin-block: 1.325rem;
 
   display: flex;
@@ -429,6 +429,7 @@ td {
   flex-wrap: wrap;
 
   padding: 2rem;
+  margin-bottom: 1.75rem;
 
   gap: 2rem;
 
@@ -476,6 +477,49 @@ canvas {
   color: var(--white-color);
   font-size: 1.325rem;
   font-weight: 300;
+}
+
+/* Footer Styling */
+
+footer {
+  position: relative;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50vw;
+  height: 3.25rem;
+  text-align: center;
+  border-top-left-radius: 4rem;
+  border-top-right-radius: 4rem;
+
+  padding-block: 1rem;
+  color: var(--white-color);
+  background-color: var(--first-color);
+}
+
+#githubProfile {
+  color: #ff69be;
+  font-weight: 700;
+  text-decoration: none;
+  position: relative;
+}
+
+#githubProfile::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ff69be;
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+#githubProfile:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 /* HTML Scrollbar Styling */
