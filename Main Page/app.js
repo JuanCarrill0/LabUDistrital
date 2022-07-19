@@ -61,7 +61,6 @@ for (let i = 0; i < accountNumber.length; i++) {
 
 accNum.textContent = newNum
 
-
 let testString = newNum
 for (let i = 0; i < testString.length; i++) {
   if (testString[i] !== " ") {
@@ -71,10 +70,9 @@ for (let i = 0; i < testString.length; i++) {
 
 const accEye = document.querySelector(".account i")
 
-accEye.addEventListener("click",() => {
+accEye.addEventListener("click", () => {
   accNum.classList.toggle("blurAcc")
 })
-
 
 /* JS For the table of money section */
 
@@ -146,3 +144,64 @@ function onBlur(e) {
       ? localStringToNumber(value).toLocaleString(undefined, options)
       : ""
 }
+
+/* JS For the chart: */
+
+const labels = ["January", "February", "March", "April", "May", "June"]
+const ctx = document.getElementById("balanceChart").getContext("2d")
+
+const data = {
+  labels: labels,
+
+  datasets: [
+    {
+      label: "Deposits",
+      backgroundColor: "rgb(92, 206, 72)",
+      borderColor: "rgb(92, 206, 72)",
+      data: [0, 10, 5, 2, 20, 30, 45],
+      color: "rgb(255,255,255)",
+    },
+    {
+      label: "Spends",
+      backgroundColor: "#FF4365",
+      borderColor: "#FF4365",
+      data: [0, 3, 4, 8, 45, 6, 10],
+      color: "rgb(255,255,255)",
+    },
+  ],
+}
+
+const config = {
+  type: "line",
+  data: data,
+  options: {
+    scales: {
+      x: {
+        ticks: {
+          color: "rgb(255,255,255)",
+        },
+      },
+      y: {
+        beginAtZero: true,
+        ticks: {
+          display: false,
+        },
+        color: "rgb(255,255,255)",
+      },
+    },
+    color: "rgb(255,255,255)",
+    plugins: {
+      legend: {
+        labels: {
+          font: {
+            size: "14",
+            family: "Poppins",
+          },
+        },
+      },
+    },
+  },
+}
+let balanceChart = new Chart(ctx, config)
+
+Chart.defaults.global.defaultColor = "rgb(255,255,255)"

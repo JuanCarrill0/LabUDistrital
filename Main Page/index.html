@@ -70,7 +70,6 @@
 
     <!--Container Main start-->
     <main>
-      <h4>Principal Content of the WebApp</h4>
       <br />
 
       <div class="container">
@@ -85,8 +84,8 @@
           <div class="rightProfile">
             <h2 class="profileTitles">Account Number:</h2>
             <div class="account">
-              <p id="accNum">**** **** **** 7891</p>
-              <i class='bx bx-low-vision bx-tada' ></i>
+              <p id="accNum" class="blurAcc">**** **** **** 7891</p>
+              <i class="bx bx-low-vision bx-tada"></i>
             </div>
             <h2 class="profileTitles">Email:</h2>
             <p id="accEmail">anonymous@udistrital.edu.co</p>
@@ -387,7 +386,27 @@
             </div>
           </section>
         </section>
-        <section id="wallet"></section>
+        <section id="balance">
+          <div id="chartInfo">
+            <div id="Chart">
+              <canvas id="balanceChart" height="100" width="300"> </canvas>
+            </div>
+            <div id="Resume">
+              <h4 id=" depositMonth" class="resumeTittles">Month</h4>
+              <h4 id=" depositAverage" class="resumeTittles">
+                Month Average <i class="bx bx-trending-up"></i>
+              </h4>
+              <div id="depositMonthlist"></div>
+              <div id="depositAverageList"></div>
+              <h4 id="spendMonth" class="resumeTittles">Month</h4>
+              <h4 id=" spendAverage" class="resumeTittles">
+                Month Average <i class="bx bx-trending-down"></i>
+              </h4>
+              <div id="spendMonthlist"></div>
+              <div id="spendtAverageList"></div>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
     <!--Container Main end-->
@@ -402,6 +421,9 @@
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"
   ></script>
+
+  <!-- Importing chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
   <script defer src="/Main Page/app.js"></script>
 </html>
