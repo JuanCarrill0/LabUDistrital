@@ -7,6 +7,36 @@ $(window).ready(() => {
   }, 200)
 })
 
+/* JS responsiveness alert */
+
+let responsiveInterval = window.setInterval(() => {
+  if ($(window).width() <= 633) {
+    Swal.fire({
+      title: "Want to continue?",
+      text: "We're still working with this screen size!\nYou may experiences some bugs in your experience.",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, sure!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire("We apologize!", "Thanks for your support.", "success")
+        clearInterval(responsiveInterval)
+      } else if (
+        /* Read more about handling dismissals below */
+        result.dismiss === Swal.DismissReason.cancel
+      ) {
+        clearInterval(responsiveInterval)
+        Swal.fire("Sorry Us 😢!", "The page will be closed", "error")
+        setTimeout(() => {
+          window.open("http://www.google.com/", "_self")
+        }, 3000)
+      }
+    })
+  }
+}, 4000)
+
 /* JS for the NavBar */
 
 document.addEventListener("DOMContentLoaded", function (event) {
