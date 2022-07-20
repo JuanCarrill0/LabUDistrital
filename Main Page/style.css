@@ -11,11 +11,13 @@
   --curvedBorder: 1.25rem;
   --z-fixed: 100;
 }
+
 *,
 ::before,
 ::after {
   box-sizing: border-box;
 }
+
 body {
   position: relative;
   margin: var(--header-height) 0 0 0;
@@ -84,6 +86,8 @@ a {
   top: 0;
   left: -30%;
   width: var(--nav-width);
+  max-width: calc(var(--nav-width) + 156px);
+
   height: 100vh;
   background-color: var(--first-color);
   padding: 0.5rem 1rem 0 0;
@@ -148,6 +152,7 @@ a {
 .height-100 {
   height: 100vh;
 }
+
 @media screen and (min-width: 768px) {
   body {
     margin: calc(var(--header-height) + 1rem) 0 0 0;
@@ -168,13 +173,45 @@ a {
   .l-navbar {
     left: 0;
     padding: 1rem 1rem 0 0;
-    max-width: calc(var(--nav-width) + 156px);
   }
   .show {
     width: calc(var(--nav-width) + 156px);
   }
   .body-pd {
     padding-left: calc(var(--nav-width) + 188px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    margin: calc(var(--header-height) + 1rem) 0 0 0;
+    padding-left: calc(var(--nav-width) + 2rem);
+    margin-left: 0.5rem;
+  }
+  .body-pd {
+    padding-left: calc(var(--nav-width) + 188px);
+  }
+  #profileImg {
+    width: 5.125rem;
+    height: 5.125rem;
+  }
+  .total {
+    position: absolute;
+    right: 30%;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  #profileImg {
+    width: 7.125rem;
+    height: 7.125rem;
+  }
+}
+
+@media screen and (min-width: 1077px) {
+  #profileImg {
+    width: 6rem;
+    height: 6rem;
   }
 }
 
@@ -215,8 +252,8 @@ a {
 }
 
 #profileImg {
-  width: 8.125rem;
-  height: 8.125rem;
+  /* width: 8.125rem; */
+  /* height: 8.125rem; */
   border-radius: 50%;
 
   margin: auto;
